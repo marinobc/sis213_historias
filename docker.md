@@ -1,0 +1,1 @@
+docker run --name Subastas -e POSTGRES_USER=root -e POSTGRES_PASSWORD=0000 -e POSTGRES_DB=Auctions -p 6432:5432 -d postgres:13

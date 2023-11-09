@@ -1,17 +1,17 @@
 # Autenticación y Autorización:
-1. `GET BASE_URL/api/v1/authorization`: Redirecciona al usuario a la federación de inicio de sesión para autenticación.
-2. `POST BASE_URL/api/v1/authorization/callback`: Procesa el callback de Auth0 y devuelve tokens de autorización.
-3. `POST BASE_URL/api/v1/authorization/refresh`: Refresca el token JWT para mantener la sesión activa.
+1. `GET /api/v1/authorization`: Redirecciona al usuario a la federación de inicio de sesión para autenticación.
+2. `POST /api/v1/authorization/callback`: Procesa el callback de Auth0 y devuelve tokens de autorización.
+3. `POST /api/v1/authorization/refresh`: Refresca el token JWT para mantener la sesión activa.
 
 # Registro de Usuario:
-1. `GET BASE_URL/api/v1/authorization/registration`: Redirecciona a la federación de inicio de sesión para registro.
-2. `GET BASE_URL/api/v1/authorization/registration/callback?code={Codigo de autorizacion de auth0}`: Procesa el callback de registro de Auth0 y confirma el registro.
+1. `GET /api/v1/authorization/registration`: Redirecciona a la federación de inicio de sesión para registro.
+2. `GET /api/v1/authorization/registration/callback?code={Codigo de autorizacion de auth0}`: Procesa el callback de registro de Auth0 y confirma el registro.
 
 # Publicación de Item:
-1. `GET BASE_URL/api/v1/cardInfo/{cardCode}`: Busca información de una carta para subasta.
-2. `POST BASE_URL/api/v1/auctioning/users/{userId}/cards/{cardCode}/images`: Sube imágenes de una carta.
-3. `POST BASE_URL/api/v1/auctioning/users/{userId}/cards`: Crea una subasta con detalles de la carta.
-4. `GET BASE_URL/api/v1/auctioning/{auctioningId}/users/{userId}/cards/{cardCode}`: Obtiene detalles de la publicación de la subasta.
+1. `GET /api/v1/cardInfo/{cardCode}`: Busca información de una carta para subasta.
+2. `POST /api/v1/auctioning/users/{userId}/cards/{cardCode}/images`: Sube imágenes de una carta.
+3. `POST /api/v1/auctioning/users/{userId}/cards`: Crea una subasta con detalles de la carta.
+4. `GET /api/v1/auctioning/{auctioningId}/users/{userId}/cards/{cardCode}`: Obtiene detalles de la publicación de la subasta.
 
 # Listado de Tarjetas para Usuarios Registrados:
 1. `GET /api/v1/cards`: Obtiene la lista de tarjetas disponibles con precios.
